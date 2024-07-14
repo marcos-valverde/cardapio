@@ -177,18 +177,19 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestauranteOpen() {
     const data = new Date();
     const hora = data.getHours();
-
+    
     return hora >= 10 && hora < 22;
     // true = restaurante está aberto     
 }
 
 const spanItem = document.getElementById("date-span");
 const isOpen = checkRestauranteOpen();
-
+console.log(isOpen);
 if(isOpen) {
     spanItem.classList.remove("bg-red-500");
     spanItem.classList.add("border-green-600"); 
 } else {
     spanItem.classList.remove("border-green-600"); 
-}   spanItem.classList.add("bg-red-500");
+    spanItem.classList.add("bg-red-500");
+}
  
